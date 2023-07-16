@@ -1,0 +1,48 @@
+:host { --square-size: 8rem; }
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, var(--square-size));
+    grid-gap: 0px;  
+    width: 100%;
+    margin: 1.5rem;
+}
+
+.square {
+    border: 5px rgba(230, 230, 230, 0.37) solid;
+    height: var(--square-size);
+}
+
+/* Remove top border from first row */
+.square:nth-child(-n+3) {
+    border-top: none;
+}
+
+/* Remove bottom border from last row */
+.square:nth-last-child(-n+3) {
+    border-bottom: none;
+}
+
+/* Remove left border from first column */
+.square:nth-child(3n+1) {
+    border-left: none;
+}
+
+/* Remove right border from last column */
+.square:nth-child(3n) {
+    border-right: none;
+}
+
+.new-game {
+    border-radius: 1.5rem;
+    padding: 0.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: 0.3rem rgba(235, 129, 194) solid;
+    font-size: 1rem;
+    transition: ease-in-out 0.25s;
+}
+
+.new-game:hover {
+    border-color: rgba(90, 225, 230, 0.7);
+}

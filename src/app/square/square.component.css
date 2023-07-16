@@ -1,0 +1,17 @@
+button { 
+    width: 100%; 
+    height: 100%; 
+    font-size: 5em;
+    background-color: transparent;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+}
+
+.x {
+    color: rgba(90, 225, 230, 0.7);
+}
+
+.o {
+    color: rgba(235, 129, 194, 0.808);
+}
